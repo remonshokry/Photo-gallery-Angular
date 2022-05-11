@@ -1,0 +1,52 @@
+<app-navbar></app-navbar>
+<app-new-user-form 
+    (closeBtn)="closeForm()" 
+    [editedUser]="editedUserData"
+    (editedUserData)="receiveEditedData($event)"
+    (userForm)="receiveFromData($event)" 
+    *ngIf="userForm"></app-new-user-form>
+<div class="container-fluid bg-blue">
+    <div class="row p-3 mx-5 justify-content-between">
+        <div class="col-2 text-white fs-3">
+            Users
+        </div>
+        <div class="col-2">
+            <button (click)="createNewUser()" class="btn btn-light rounded-0
+                w-100 text-blue fw-bold">
+                +Add User
+            </button>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <table class="table table-borderless table-hover">
+                <tr class="shadow-sm border border bg-secondary text-light">
+                    <th class= 'p-3'></th>
+                    <th class= 'p-3'>Name</th>
+                    <th class= 'p-3'>Email</th>
+                    <th class= 'p-3'>Number</th>
+                    <th class= 'p-3'>Address</th>
+                </tr>
+                <tbody class="table-hover">
+                    <tr *ngFor="let user of users"
+                        routerLink="users/{{user.id}}/albums">
+                        <td>
+                            <button (click)="deleteUser( $event,user)"
+                                class="btn btn-danger mx-2 btn-sm"><i class="bi
+                                    bi-x-lg"></i></button>
+                            <button (click)="editUser( $event,user)" class="btn
+                                btn-success mx-2 btn-sm"><i class="bi
+                                    bi-pencil-fill"></i></button>
+                        </td>
+                        <td>{{user.name}}</td>
+                        <td>{{user.email}}</td>
+                        <td>{{user.phone}}</td>
+                        <td>{{user.address.suite }},{{user.address.city }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

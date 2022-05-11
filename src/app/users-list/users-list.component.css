@@ -1,0 +1,19 @@
+*{
+    font-size: 0.97em;
+}
+.bg-blue{
+    background-color: #376aa6 !important ;
+}
+
+.text-blue{
+    color: #376aa6 !important ;
+
+}
+td{
+    padding: 1rem !important;
+}
+
+tr{
+    border: 1px solid #ddd;
+    cursor: pointer;
+}

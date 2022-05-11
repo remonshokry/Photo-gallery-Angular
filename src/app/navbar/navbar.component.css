@@ -1,0 +1,16 @@
+*{
+    font-size: 0.98em;
+}
+
+#logo{
+    font-family:'Arial Narrow Bold', sans-serif ;
+    color:orange !important;
+}
+a{
+    text-decoration: none !important;
+    appearance: none !important;
+    color: black;
+}
+a:hover{
+    color:orange;
+}

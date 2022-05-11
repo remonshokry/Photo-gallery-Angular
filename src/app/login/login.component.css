@@ -1,0 +1,23 @@
+.bg-blue{
+    background-color: #376aa6 !important ;
+}
+.form-control{
+    background-color: #ddd;
+}
+
+.form-control.ng-invalid.ng-touched{
+    border:2px solid red;
+}
+
+.text-blue{
+    color: #376aa6 !important ;
+}
+
+.bg-orange{
+
+    background-color: #e06c4f !important;
+}
+
+.text-orange{
+    color: #e06c4f !important;
+}

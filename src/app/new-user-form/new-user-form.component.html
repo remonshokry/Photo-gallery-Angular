@@ -1,0 +1,75 @@
+<div class="big-container">
+    <div class="bg"></div>
+    <div class="form-container">
+        <div class="closeBtn">
+            <button (click)="closeForm()" class="btn btn-danger btn-sm">X</button>
+        </div>
+        <div class="title">
+            <div class="text-orange fs-4 fw-bold">User Data</div>
+        </div>
+        <form [formGroup]="form" (ngSubmit)="addNewUser()">
+            <div class="row mx-4 mt-3">
+                <div class="col">
+                    <div class="form-group">
+                        <label>
+                            User Name
+                        </label>
+                        <input formControlName="name" type="text" 
+                            placeholder="eg:john Doe" class="form-control">
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-group">
+                        <label>
+                            Email Address
+                        </label>
+                        <input formControlName="email" type="text"
+                            placeholder="eg: john@email.com"
+                            class="form-control">
+                    </div>
+                </div>
+            </div>
+            <div class="row mx-4 mt-3">
+                <div class="col">
+                    <div class="form-group">
+                        <label>
+                            Phone
+                            <input formControlName="phone" type="text"
+                                placeholder="eg: 01123456789"
+                                class="form-control">
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="row mx-4 mt-3">
+                <div class="col">
+                    <label>
+                        Address
+                    </label>
+                </div>
+            </div>
+            <div class="row mx-4"formGroupName="address">
+                <div class="col">
+                    <input formControlName="city" type="text" placeholder="City"
+                        class="form-control">
+                </div>
+                <div class="col">
+                    <input formControlName="street" type="text"
+                        placeholder="Street" class="form-control">
+                </div>
+                <div class="col">
+                    <input formControlName="suite" type="text" placeholder=""
+                        class="form-control">
+                </div>
+            </div>
+            <div class="row mx-3 mt-5">
+                <div class="col d-flex justify-content-center">
+                    <button [disabled]=" form.invalid " class="w-50 btn
+                        btn-primary rounded-0">
+                        Save
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
